@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BlueMatrix Technologies</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0059b3;
+            --accent-color: #66b2ff;
+            --background-color: #f4f9ff;
+            --text-color: #1a1a1a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            position: relative;
+            height: 1000px;
+            overflow: hidden;
+        }
+
+        header img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 51, 102, 0.6);
+            z-index: 1;
+        }
+
+        header .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 5em 1em;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 0.3em;
+        }
+
+        header p {
+            font-size: 1.4em;
+        }
+
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 1.5em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4em 2em;
+        }
+
+        .section {
+            margin-bottom: 5em;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            color: var(--primary-color);
+        }
+
+        .section p {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #cce0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2em;
+            margin: 2em 0;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2.5em 1em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            .section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#mission">Mission Statement</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <header>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjVhbTZ3eXFkNXBtM2d1bGM5Z3M0djc0bHoweGd0dGs0MDB4MG40ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1k0YYUlIOYK2QA6HVK/giphy.gif" alt="BlueMatrix Banner Animation">
+        <div class="content">
+            <h1>BlueMatrix Technologies</h1>
+            <p>Identifying a New Future</p>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <section id="mission" class="section">
+            <h2>Mission Statement</h2>
+            <p>BlueMatrix Technologies is a forward-thinking company specializing in 
+                <span class="highlight">object detection powered by machine learning</span>. We apply cutting-edge AI 
+                to real-world challenges in agriculture, marine science, and beyond.
+            </p>
+            <img src="https://i.postimg.cc/NFRvgGXL/missionstatement.jpg" alt="Description of the image" class="mission-image">
+</section>
+
+       <section id="projects" class="section">
+    <h2>Our Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <h3>Disease Detection in Corn</h3>
+            <p>
+                We are developing a robust machine learning model capable of identifying and tracking diseases in corn crops using advanced image recognition.
+                This helps farmers take proactive action and improve crop yield. Now we are branching out to other crops.
+            </p>
+            <img src="https://i.postimg.cc/NFTRNRwL/IMG-3588.jpg" alt="Corn Disease Detection" class="project-image">
+        </div>
+
+        <div class="project">
+            <h3>Fish Detection via Sonar</h3>
+            <p>
+                Currently, we are building a new object detection system to identify and track fish populations using
+                <span class="highlight">sonar imaging technology</span>.
+                This model aims to support sustainable fishing and marine ecosystem monitoring, ensuring long-term fishery conservation.
+            </p>
+            <img src="https://i.postimg.cc/MHH5ZnRY/fishfnder.jpg" alt="Fish Detection Sonar" class="project-image">
+        </div>
+    </div>
+</section>
+
+        <section id="team" class="section">
+            <h2>Our Team</h2>
+            <p>Our dedicated team consists of students from the University of Florida, MIT, and Virginia Tech who are 
+               knowledgable in both agricutural/marine science as well as engineering.</p>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://i.postimg.cc/7br8Z4kh/Whats-App-Image-2025-05-20-at-19-33-09-387236c3.jpg" alt="Team Member 1">
+                    <h4>Daniel Perodin</h4>
+                    <p>University of Florida Student Majoring in Electrical Engineering</p>
+              </div>
+                <div class="team-member">
+                    <img src="https://www.davidsongifted.org/wp-content/uploads/2022/08/You_Sunny-8-545x590.jpg" alt="Team Member 2">
+                    <h4>Sunny You</h4>
+                    <p>Massachusetts Institute of Technology Student Majoring in Computer Science</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.postimg.cc/5293xL2h/dak1.jpg" alt="Team Member 3">
+                    <h4>Dakota Rosher</h4>
+                    <p>University of Florida Student Majoring in Mechanical Engineering</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.postimg.cc/bJF1mtRn/nickleeder1.jpg" alt="Team Member 4">
+                    <h4>Nicolas Leeder</h4>
+                    <p>University of Florida Student Majoring in Electrical Engineering</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.postimg.cc/2SvkTcvY/thumbnail-IMG-2931.jpg" alt="Team Member 5">
+                    <h4>David Cohn</h4>
+                    <p>Virginia Tech Student Majoring in Electrical Engineering</p>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to collaborate? Reach out to us at 
+                <a href="mailto:blue.matrix.technologies24@gmail.com">blue.matrix.technologies24@gmail.com</a> or find us on LinkedIn.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 BlueMatrix Technologies. All rights reserved.</p>
+    </footer>
+</body>
+</html>

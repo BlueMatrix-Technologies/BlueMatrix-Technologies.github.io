@@ -1,0 +1,80 @@
+header {
+    position: relative;
+    height: auto; /* Or a fixed height like 400px if needed */
+    width: 100%;
+}
+
+header img {
+    width: 100%;
+    height: auto; /* or set a fixed height like 400px if needed */
+    display: block;
+}
+
+header .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* match the height of the header/gif */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centers vertically */
+    text-align: center;
+    color: white; /* or another color to contrast the gif */
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+body {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.projects-container {
+    display: flex;
+    gap: 2em; /* space between projects */
+}
+
+.project {
+    flex: 1 1 50%; /* each project takes half the width */
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    border-radius: 6px;
+}
+
+.mission-image {
+    display: block;
+    margin: 2em auto; /* centers the image */
+    width: 100%; /* makes image take full width of container */
+    max-width: 800px; /* optional: prevents it from being too wide */
+    height: auto; /* maintains aspect ratio */
+    border-radius: 10px; /* optional: rounded corners */
+}
+#contact {
+    max-width: auto;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.section-content {
+  max-width: 800px;
+}
+
