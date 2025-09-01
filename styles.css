@@ -68,6 +68,7 @@ body {
     height: auto; /* maintains aspect ratio */
     border-radius: 10px; /* optional: rounded corners */
 }
+
 #contact {
     max-width: auto;
     margin-left: 20px;
